@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>New Subscriber Alert — Newfly Tech Solutions</title>
+<style>
+  body{margin:0;background:#f4f7fb;font-family:Arial,Helvetica,sans-serif;color:#222}
+  .wrap{max-width:680px;margin:28px auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 28px rgba(15,23,42,0.08)}
+  .hdr{background:linear-gradient(135deg,#0b5ed7,#084298);color:#fff;padding:22px 20px;text-align:center}
+  .hdr h1{margin:0;font-size:20px}
+  .body{padding:20px}
+  .block{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}
+  .label{min-width:120px;color:#0b5ed7;font-weight:700}
+  .value{flex:1;color:#333}
+  .foot{background:#f3f6fb;padding:14px 20px;text-align:center;color:#666;font-size:13px}
+  @media (max-width:520px){.block{flex-direction:column}.label{min-width:0}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hdr">
+      <h1>New Subscriber Alert</h1>
+    </div>
+
+    <div class="body">
+      <p style="margin:0 0 12px">A new user has subscribed. Details below:</p>
+
+      <div class="block">
+        <div class="label">Subscriber Name</div>
+        <div class="value">{{ subscriber_name or '—' }}</div>
+      </div>
+
+      <div class="block">
+        <div class="label">Subscriber Email</div>
+        <div class="value">{{ subscriber_email }}</div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid #eee;margin:18px 0"/>
+
+      <p style="margin:0;color:#444">Open the admin panel to view more details or contact the subscriber.</p>
+    </div>
+
+    <div class="foot">
+      Newfly Tech Solutions — automated notification<br/>
+      <a href="https://www.newflytechsolutions.com" style="color:#0b5ed7;text-decoration:none">www.newflytechsolutions.com</a>
+    </div>
+  </div>
+</body>
+</html>
